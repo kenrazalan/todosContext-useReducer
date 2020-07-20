@@ -8,10 +8,10 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import EditTodoForm from './EditTodoForm';
-import {TodosContext} from './contexts/todos-context';
+import {DispatchContext} from './contexts/todos-context';
 
 function Todo({task,id,completed}){
-    const {dispatch}=useContext(TodosContext);
+    const dispatch=useContext(DispatchContext);
     const [edit,toggle] =useToggle(false);
     return (    
                 <ListItem style={{height:"64px"}}>
